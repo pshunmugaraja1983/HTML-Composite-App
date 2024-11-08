@@ -1,0 +1,103 @@
+
+<html>
+
+
+  <body>
+
+    <h3>Employees</h3>
+
+    <table border="2">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Emp ID</th>
+          <th scope="col">Job Title</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Email Address</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+                                        
+      </tbody>
+    </table>
+
+  </body>
+
+  <head>
+    <script>
+
+      const data = 
+          [
+      {
+        "empId": "rirani",
+        "jobTitle": "Developer",
+        "firstName": "Romin",
+        "lastName": "Irani",
+        "phoneNumber": "408-1234567",
+        "emailAddress": "romin.k.irani@gmail.com"
+      },
+      {
+        "empId": "nirani",
+        "jobTitle": "Developer",
+        "firstName": "Neil",
+        "lastName": "Irani",
+        "phoneNumber": "408-1111111",
+        "emailAddress": "neilrirani@gmail.com"
+      },
+      {
+        "empId": "thanks",
+        "jobTitle": "Program Directory",
+        "firstName": "Tom",
+        "lastName": "Hanks",
+        "phoneNumber": "408-2222222",
+        "emailAddress": "tomhanks@gmail.com"
+      },
+
+      {
+        "empId": "EMP01",
+        "jobTitle": "Developer",
+        "firstName": "Shivang",
+        "lastName": "Yadav",
+        "phoneNumber": "+91-9876512345",
+        "emailAddress": "syadavji@gmail.com"
+      },
+      {
+        "empId": "EMP02",
+        "jobTitle": "Jr. Developer",
+        "firstName": "Alvin",
+        "lastName": "Alexander",
+        "phoneNumber": "+91-9876512355",
+        "emailAddress": "aalex@gmail.com"
+      },
+      {
+        "empId": "EMP03",
+        "jobTitle": "Manager",
+        "firstName": "Kuldeep",
+        "lastName": "Tak",
+        "phoneNumber": "+91-9876512366",
+        "emailAddress": "ktak@gmail.com"
+      }  
+    ]      
+
+      const tableData = data.map(value => {
+        return (
+          `<tr>
+            <td>${value.empId}</td>
+            <td>${value.jobTitle}</td>
+            <td>${value.firstName}</td>
+            <td>${value.lastName}</td>
+            <td>${value.phoneNumber}</td>
+            <td>${value.emailAddress}</td>
+          </tr>`
+        );
+      }).join('');
+
+      const tableBody = document.querySelector("#tableBody");
+      tableBody.innerHTML = tableData;
+
+    </script>
+  </head>
+
+</html>
+
